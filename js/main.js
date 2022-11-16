@@ -99,9 +99,11 @@ const getNewEntry = () => {
 	return document.getElementById('newItem').value.trim()
 }
 
-const nextItemId = () => {
+
+
+const calcNextItemId = () => {
 	let nextItemId = 1
-	const list = toDoList.getList()
+	const list = toDoList.getList();
 	if (list.length > 0) {
 		nextItemId = list[list.length - 1].getId() + 1
 	}
